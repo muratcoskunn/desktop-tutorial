@@ -8,12 +8,16 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseCityDao<T extends BaseEntity> implements ICityDao {
+public class BaseCityDao implements ICityDao {
     public Connection connection;
+    public String connectionUrl="jdbc:mysql://localhost:3306/world";
+    String user ="root";
+    String password="1234";
+
     public void Connect() {
         try {
             this.connection = DriverManager.getConnection
-                    ("jdbc:mysql://localhost:3306/world", "root", "1234");
+                    (connectionUrl, user, password);
         } catch (Exception exception) {
             System.out.println(exception);
         }
