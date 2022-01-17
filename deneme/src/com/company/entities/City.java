@@ -7,6 +7,17 @@ public class City {
     public String district;
     public long population;
 
+    public City(int id, String name, String countryCode, String district, long population) {
+        this.id = id;
+        this.name = name;
+        this.countryCode = countryCode;
+        this.district = district;
+        this.population = population;
+    }
+
+    public City() {
+    }
+
     public int getId() {
         return id;
     }
