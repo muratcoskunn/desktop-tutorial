@@ -1,6 +1,6 @@
 package com.company.entities;
 
-public class City {
+public class City extends BaseEntity {
     public int id;
     public String name;
     public String countryCode;

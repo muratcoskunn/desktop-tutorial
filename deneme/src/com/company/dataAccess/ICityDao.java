@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ICityDao {
     public List<City> getAll();
+    public List<String>getAllByName();
+    public List<String>getAllByCountryCode();
 }

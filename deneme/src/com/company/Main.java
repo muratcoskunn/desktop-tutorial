@@ -15,11 +15,10 @@ public class Main {
 
     public static void main(String[] args) {
         ICityDao cityDao=new CityDao();
-        List<City> cityList = new ArrayList<>();
-        cityList=cityDao.getAll();
-        for (City city:cityList
+        List<String> List= cityDao.getAllByCountryCode();
+        for (String code:List
              ) {
-            System.out.println(city.name);
+            System.out.println(code);
         }
 
     }
