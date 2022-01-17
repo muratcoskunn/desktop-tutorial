@@ -10,12 +10,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CityDao implements ICityDao {
+    Connection connection;
+    public void Connect() {
+        try{
+            this.connection = DriverManager.getConnection
+                    ("jdbc:mysql://localhost:3306/world","root","1234");}
+        catch (Exception exception){
+            System.out.println(exception);
+        }
+
+    }
+
+
 
     @Override
     public List<City> getAll() {
         List list=new ArrayList();
+        Connect();
         try{
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/world","root","1234");
             Statement statement=connection.createStatement();
             ResultSet resultSet =statement.executeQuery("Select * from city");
             while(resultSet.next()) {
