@@ -32,11 +32,11 @@ public class City {
     }
 
     public String getDistrict() {
-        return District;
+        return district;
     }
 
     public void setDistrict(String district) {
-        District = district;
+        this.district = district;
     }
 
     public long getPopulation() {
