@@ -13,7 +13,7 @@ public class Main {
             Statement statement=connection.createStatement();
             ResultSet resultSet =statement.executeQuery("Select * from city");
             while(resultSet.next())
-                System.out.println(resultSet.getString(1));
+                System.out.println(resultSet.getString(2));
 
 
         }catch (Exception exception){
