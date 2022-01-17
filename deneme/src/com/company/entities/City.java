@@ -4,7 +4,7 @@ public class City {
     public int id;
     public String name;
     public String countryCode;
-    public String District;
+    public String district;
     public long population;
 
     public int getId() {
